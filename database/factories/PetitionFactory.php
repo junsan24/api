@@ -18,7 +18,11 @@ class PetitionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->word(),
+            'categories' => fake()->text(),
+            'description' => fake()->paragraph(150),
+            'author' => fake()->name(),
+            'signees' => fake()->numberBetween(1,1000)
         ];
     }
 }
